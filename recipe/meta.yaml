@@ -1,8 +1,5 @@
 {% set version = "1.4.0" %}
 
-{% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
-
 package:
   name: r-rsaga
   version: {{ version.replace("-", "_") }}
@@ -14,8 +11,8 @@ source:
   sha256: 0563c98547f520212475a3b9783d3844d5575858d9284eca0494fcd14ecfb155
 
 build:
-  number: 1
-  skip: true  # [win]
+  noarch: generic
+  number: 2
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
@@ -27,7 +24,6 @@ requirements:
     - r-gstat
     - r-shapefiles
     - r-plyr
-    - r-rgdal
     - r-stringr
     - r-magrittr
   run:
@@ -35,14 +31,12 @@ requirements:
     - r-gstat
     - r-shapefiles
     - r-plyr
-    - r-rgdal
     - r-stringr
     - r-magrittr
 
 test:
   commands:
-    - R -e "library('RSAGA')"  # [not win]
-    - R -e \"library('RSAGA')\"  # [win]
+    - R -e "library('RSAGA')"
 
 about:
   home: https://cran.r-project.org/web/packages/RSAGA/index.html
