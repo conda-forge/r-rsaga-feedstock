@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rsaga-feedsto
 
 Home: https://cran.r-project.org/web/packages/RSAGA/index.html
 
-Package license: GPL-2.0
+Package license: GPL-2.0-or-later
 
 Summary: Provides access to geocomputing and terrain analysis functions of the geographical information system (GIS) 'SAGA' (System for Automated Geoscientific Analyses) from within R by running the command  line version of SAGA. This package furthermore provides several R functions for handling ASCII grids, including a flexible framework for applying local functions (including predict methods of fitted models) and focal functions to multiple grids. SAGA GIS is available under GPLv2 / LGPLv2 licence from http://sourceforge.net/projects/saga-gis/.
 
